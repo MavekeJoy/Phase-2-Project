@@ -1,0 +1,128 @@
+{
+    "track-suits" : [
+    {
+    
+    "name" : "Nike-Darkbrown",
+    "price" :"45.00",
+    "description" : " Soft, breathable fabric ensures all-day comfort, making it ideal for workouts or lounging.",
+    "image" : "https://i8.amplience.net/i/jpl/jd_681270_a?qlt=92&w=600&h=765&v=1&fmt=auto"  
+    },
+    {
+    
+    "name" : "Nike-Beige",
+    "price" :"45.00",
+    "description" : " Designed with versatility in mind, this set features a sleek, modern fit with a cozy interior. ",
+    "image" :"https://images.asos-media.com/products/nike-oversized-fleece-jogger-in-earth-brown/23571945-1-archaeobrown?$n_640w$&wid=513&fit=constrain"
+    },
+    {
+     
+    "name" : "Nike-White",
+    "price" :"40.50",
+    "description" : "Crafted from 100% cotton, it offers superior breathability and softness. ",
+    "image" : "https://i8.amplience.net/i/jpl/jd_681292_a?qlt=92&w=600&h=765&v=1&fmt=auto"
+    },
+    {
+    
+    "name" : "Nike-Pink",
+    "price" :"55.00",
+    "description" : "With its athletic cut and durable construction, this tracksuit is built to perform, whether you're on the move or at rest.",
+    "image" : "https://media.finishline.com/i/finishline/DQ5688_615_M2?$default$&w=670&h=670&bg=rgb(237,237,237)"
+    },
+    {
+   
+    "name" : "Nike-Black",
+    "price" :"58.00",
+    "description" : "This tracksuit combines eco-conscious materials with a modern, relaxed fit, providing comfort without compromising on style. ",
+    "image": "https://i8.amplience.net/i/jpl/jd_669145_a"
+    }
+   ],
+   "t-shirts" :[
+   {
+   
+    "name" : "brown-shirt",
+    "price" :"20.00",
+    "description" : "Crafted from 100% pure cotton, it offers a soft, breathable feel that’s perfect for everyday wear. ",
+    "image":"https://images.meesho.com/images/products/309210147/hhrlr_512.webp"
+   },
+   {
+    
+    "name" : "white-shirt",
+    "price" :"25.00",
+    "description" : "Made from high-quality cotton, this tee provides a gentle, cozy feel against your skin.",
+    "image":"https://images.meesho.com/images/products/236653049/6mb6h_512.jpg"
+   },
+   {
+    
+    "name" : "blue-shirt",
+    "price" :"20.00",
+    "description" : "The breathable cotton fabric ensures all-day comfort, making it a staple in any wardrobe.",
+    "image":"https://images.meesho.com/images/products/290992605/v3rk6_512.jpg"
+   },
+   {
+ 
+    "name" : "green-shirt",
+    "price" :"30.00",
+    "description" : "The airy, soft cotton fabric keeps you cool and comfortable, while the clean, simple design makes it easy to dress up or down.",
+    "image":"https://images.meesho.com/images/products/296243213/9sgjq_512.webp"
+   },
+   {
+    
+    "name" : "beige-shirt",
+    "price" :"45.00",
+    "description" : "Made from sustainably sourced cotton, this tee offers both comfort and a commitment to the environment. ",
+    "image":"https://images.meesho.com/images/products/396421158/9ff4b_512.webp"
+   }
+  ],
+  "bags":[
+   {
+   
+    "name" : "white-bag",
+    "price" :"100.00",
+    "description" : "Large Capacity Solid Color Tote Bag",
+    "image":"https://m.media-amazon.com/images/I/71W1zNmOLrL._AC_UY900_.jpg"
+   },
+   {
+
+    "name" : "black-bag",
+    "price" :"100.00",
+    "description" : " Eco-Friendly Cotton Tote Bag",
+    "image":"https://m.media-amazon.com/images/I/81n4ohshHrL._AC_UY1000_.jpg"
+   }, 
+   {
+    
+    "name" : "green-bag",
+    "price" :"100.00",
+    "description" : "Classic Cotton Canvas Bag",
+    "image":"https://i5.walmartimages.com/seo/SVE-Canvas-Tote-Bags-for-Women-Handbag-Tote-Purse-with-Zipper-Canvas-Crossbody-Bag-for-Office-Travel-School-Green_a9313b9b-45ef-47c9-8d98-d66a3a513d7f.3d7497f16a5f39de0bbec33abf3349bd.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
+   }
+ ],
+ "shoes":[
+    {
+  
+    "name" : "Nike-shoes",
+    "price" :"220.00",
+    "description" : "Nike Air Max Series",
+    "image": "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/08f113fb-396f-4445-a89b-f82752a7cb82/AIR+MAX+90+G.png" 
+    },
+    {
+   
+    "name" : "Addidas-shoes",
+    "price" :"240",
+    "description" : "Adidas Ultraboost",
+    "image":"https://assets.adidas.com/images/w_600,f_auto,q_auto/6be9d64a933e4652b77c3463591cb88a_9366/ULTRABOOST_1.0_SHOES_Blue_ID5935_01_standard.jpg" 
+    },
+    {
+   
+    "name" : "Puma-shoes",
+    "price" :"340",
+    "description" : " Puma Suede Classic",
+    "image":"https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/381410/01/sv01/fnd/PNA/fmt/png/Suede-Classic-XXI-Women's-Sneakers"
+    },
+    {
+   
+    "name" : "Reebok-shoes",
+    "price" :"300.00",
+    "description" : "Classic-Club C-85 white",
+    "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCEgiCKSbeBUnVqza-fnoX0A8bLTew1WW-2w&s"
+    }
+   ]}
