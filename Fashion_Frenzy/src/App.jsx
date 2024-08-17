@@ -1,35 +1,24 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthForm from './Components/AuthForm';
-
-import Home from './Components/Home'; // Create a Home component
-import Footer from './Components/Footer';
-import Products from './Components/Product';
-import About from './Components/About';
-import Head from './Components/Head';
+import MergedPage from './Components/MergedPage';
+import Product from './Components/Product';
+import ShoppingCart from './Components/ShoppingCart';
 
 const App = () => {
+  const [cart, setCart] = useState([]);
+
   return (
-    
     <Router>
-      <div className="outer-background min-h-screen bg-cover bg-center" style={{ backgroundImage: 'url(./src/Images/background.jpeg)' }}>
-      
-      
-        <Routes>
-          <Route path="/" element={<AuthForm isSignup={false} />} />
-          <Route path="/signup" element={<AuthForm isSignup={true} />} />
-          <Route path="/home" element={<Home />} />
-          
-        </Routes>
-      
-      <Head />
-      <About />
-      <Products />
-      <Footer />
-   </div>
+      <Routes>
+        <Route path="/" element={<AuthForm />} /> 
+        <Route path="/login" element={<AuthForm isSignup={false} />} /> 
+        <Route path="/merged" element={<MergedPage />} />
+        <Route path="/products" element={<Product cart={cart} setCart={setCart} />} /> 
+        <Route path="/shopping-cart" element={<ShoppingCart cart={cart} />} />
+      </Routes>
     </Router>
-   
   );
-}
+};
 
 export default App;

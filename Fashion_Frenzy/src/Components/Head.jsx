@@ -1,55 +1,30 @@
 import React from 'react';
 
-
-const Head=() =>{
+const Head = () => {
   return (
- 
-
-    <div className="relative  bg-main-pattern bg-cover">
-    <div className="container mx-auto ">
-    <div className="dark:bg-dark bg-[#f3c9a3] sm:min-h-[600px] sm:grid sm:place-items-center duration-300">
-    <div className="container">
-      <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center">
-        <div data-aos="slide-right" data-aos-duration="1500">
-          <img
-            src="./src/Images/body.jpeg"
-            alt=""
-            className="sm:scale-125 sm:-translate-x-11 max-h-[300px] "
-          />
-        </div>
-        <div>
-          <div className="space-y-5 sm:p-16 pb-6">
-            <h1
-              data-aos="fade-up"
-              className="text-5xl sm:text-7xl font-bold font-serif"
-            >
+    <div className="relative bg-main-pattern bg-cover">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="dark:bg-dark bg-[#f3c9a3] min-h-[400px] sm:min-h-[600px] flex flex-col sm:flex-row items-center justify-between duration-300">
+          <div className="order-2 sm:order-1 w-full sm:w-1/2 flex justify-center sm:justify-start">
+            <img
+              src="./src/Images/body.jpeg"
+              alt="Fashion Frenzy"
+              className="w-full max-w-sm sm:scale-125 sm:-translate-x-11 max-h-[200px] sm:max-h-[300px]"
+            />
+          </div>
+          <div className="order-1 sm:order-2 w-full sm:w-1/2 text-center sm:text-left space-y-5 p-6 sm:p-16">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold font-serif">
               WHERE FASHION MEETS FRENZY
             </h1>
-            <br />
-            <p data-aos="fade-up" className="leading-8 tracking-wide">
-            
+            <p className="text-xl sm:text-2xl md:text-3xl">
+              Find the best fashion style for you! <br />
+              Elevate Your Shopping Experience Today!
             </p>
-            <p data-aos="fade-up" className="text-3xl">
-                Find the best fashion style for you ! <br />
-                Elevate Your Shopping Experience Today !
-            </p>
-            <br />
-            <button data-aos="fade-up" className="button-outline px-6 py-2 bg-[#a05616] hover:bg-orange-300">
-              Get Started
-            </button>
           </div>
         </div>
       </div>
     </div>
-    </div>
-    </div>
-    </div>
-   
-          
-    );
-  }
-    
-  
-
+  );
+}
 
 export default Head;

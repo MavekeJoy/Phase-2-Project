@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-// Create a context for the cart state
-export const CartContext = React.createContext();
-
-const Product = () => {
+const Product = ({ cart, setCart }) => {
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
+  const [filter, setFilter] = useState('all');
+  const location = useLocation();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,7 +21,6 @@ const Product = () => {
         const shoesResponse = await fetch('http://localhost:3002/shoes');
         const shoes = await shoesResponse.json();
 
-        // Combine all products into a single array
         const allProducts = [...trackSuits, ...tShirts, ...bags, ...shoes];
         setProducts(allProducts);
       } catch (error) {
@@ -33,36 +31,51 @@ const Product = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const category = queryParams.get('filter');
+    setFilter(category || 'all');
+  }, [location.search]);
+
+  const filteredProducts = products.filter(product => {
+    if (filter === 'all') return true;
+    if (filter === 't-shirts') return product.category === 't-shirt';
+    if (filter === 'shoes') return product.category === 'shoes';
+    if (filter === 'jumpsuits') return product.category === 'jumpsuit';
+    if (filter === 'bags') return product.category === 'bag';
+    return false;
+  });
+
   const addToCart = (product) => {
     setCart(prevCart => {
-      const existingProduct = prevCart.find(item => item.name === product.name);
-      if (existingProduct) {
+      const existingItem = prevCart.find(item => item.id === product.id);
+      if (existingItem) {
         return prevCart.map(item =>
-          item.name === product.name ? { ...item, quantity: item.quantity + 1 } : item
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
         );
-      } else {
-        return [...prevCart, { ...product, quantity: 1 }];
       }
+      return [...prevCart, { ...product, quantity: 1 }];
     });
   };
 
   return (
-    <CartContext.Provider value={{ cart, setCart }}>
-         <div className="container mx-auto">
-        <h1 class="text-5xl font-bold text-center underline text-black bg-[#f3c9a3] p-4 mx-auto">ALL PRODUCTS</h1>
+    <div className="min-h-screen bg-fixed bg-cover bg-center" style={{ backgroundImage: "url('https://i.pinimg.com/736x/b4/2e/53/b42e5307927c62c21985514a5be5cf83.jpg')" }}>
+      <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#f3c9a3]">AVAILABLE PRODUCTS</h1>
+      <div className="container mx-auto p-4 sm:p-6 lg:p-8">
+        <div className="mb-4 text-center">
+          <Link to="/shopping-cart" className="bg-[#f3c9a3] text-white py-2 px-4 rounded hover:bg-blue-600">
+            Wishlist({cart.reduce((acc, item) => acc + item.quantity, 0)})
+          </Link>
         </div>
-      <div className="container mx-auto p-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.map((product, index) => (
+          {filteredProducts.map((product, index) => (
             <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-48 object-cover"
-              />
+              <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
               <div className="p-4">
-                <h5 className="text-xl font-semibold mb-2">{product.name}</h5>
-                <p className="text-gray-700 mb-2">{product.description}</p>
+                <h5 className="text-lg sm:text-xl font-semibold mb-2">{product.name}</h5>
+                <p className="text-gray-700 text-sm sm:text-base mb-2">{product.description}</p>
                 <p className="text-lg font-bold mb-4">${product.price}</p>
                 <button
                   onClick={() => addToCart(product)}
@@ -75,7 +88,7 @@ const Product = () => {
           ))}
         </div>
       </div>
-    </CartContext.Provider>
+    </div>
   );
 }
 

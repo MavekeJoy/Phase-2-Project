@@ -5,8 +5,8 @@ import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 const Footer = () => {
     return (
         <div className="relative bg-main-pattern bg-cover">
-            <div className="container mx-auto">
-                <div className="dark:bg-dark bg-gradient-to-t from-[#7d4626] to-[#fcd6ab] sm:min-h-[200px] sm:grid sm:place-items-center duration-300">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="dark:bg-dark bg-gradient-to-t from-[#7d4626] to-[#fcd6ab] sm:min-h-[100px] sm:grid sm:place-items-center duration-300">
                     <div className="container">
                         <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center ">
                         <h1 className="text-4xl font-bold pt-20">FASHION FRENZY</h1><br />
