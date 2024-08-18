@@ -8,7 +8,7 @@ const Head = () => {
           <div className="order-2 sm:order-1 w-full sm:w-1/2 flex justify-center sm:justify-start">
             <img
               src=
-              "./src/Images/body.jpeg"
+              "/Images/body.jpeg"
               alt="Fashion Frenzy"
               className="w-full max-w-sm sm:scale-125 sm:-translate-x-11 max-h-[200px] sm:max-h-[300px]"
             />

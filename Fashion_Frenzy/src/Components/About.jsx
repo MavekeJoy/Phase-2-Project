@@ -25,7 +25,7 @@ const About = () => {
           </div>
           <div className="order-1 sm:order-2 w-full sm:w-1/2 flex justify-center sm:justify-end">
             <img
-              src="./src/Images/about.jpeg"
+              src="/Images/about.jpeg"
               alt="About Us"
               className="w-full max-w-sm sm:scale-125 sm:translate-x-11 max-h-[200px] sm:max-h-[300px]"
             />
