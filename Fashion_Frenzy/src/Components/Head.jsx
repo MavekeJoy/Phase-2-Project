@@ -7,7 +7,8 @@ const Head = () => {
         <div className="dark:bg-dark bg-[#f3c9a3] min-h-[400px] sm:min-h-[600px] flex flex-col sm:flex-row items-center justify-between duration-300">
           <div className="order-2 sm:order-1 w-full sm:w-1/2 flex justify-center sm:justify-start">
             <img
-              src="./src/Images/body.jpeg"
+              src=
+              "./src/Images/body.jpeg"
               alt="Fashion Frenzy"
               className="w-full max-w-sm sm:scale-125 sm:-translate-x-11 max-h-[200px] sm:max-h-[300px]"
             />
