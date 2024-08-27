@@ -56,6 +56,7 @@ Its an online clothing store that allows users to browse and select their favori
 2. Tailwind.css :  https://tailwindcss.com/
 3. React Router: https://reactrouter.com/
 4. Firebase: https://firebase.google.com/
+5. Blog : https://mavekejoy.hashnode.dev/fashion-frenzyclothing-line
 
 ### License 
    - This project is licensed under MIT license.
